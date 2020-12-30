@@ -6,9 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AlphaWare</title>
+	<title>Quản lý IRON FEVER</title>
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="icon" href="../img/logo.jpg">
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery-1.7.2.min.js"></script>
 	<script src="../js/carousel.js"></script>
@@ -42,7 +43,7 @@
 <body>
 	<div id="header" style="position:fixed;">
 		<img src="../img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 		
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -52,8 +53,8 @@
 			?>
 				
 			<ul>
-				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
+				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
 			</ul>
 	</div>
 	
@@ -64,7 +65,7 @@
 		<div id="add" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-				<h3 id="myModalLabel">Thêm sản phẩm...</h3>
+				<h3 id="myModalLabel">Thêm sản phẩm</h3>
 			</div>
 				<div class="modal-body">
 					<form method="post" enctype="multipart/form-data">
@@ -79,19 +80,19 @@
 							<tr/>';
 							?>
 							<tr>
-								<td><input type="text" name="product_name" placeholder="Product Name" style="width:250px;" required></td>
+								<td><input type="text" name="product_name" placeholder="Tên sản phẩm" style="width:250px;" required></td>
 							<tr/>
 							<tr>
-								<td><input type="text" name="product_price" placeholder="Price" style="width:250px;" required></td>
+								<td><input type="text" name="product_price" placeholder="Giá" style="width:250px;" required></td>
 							</tr>
 							<tr>
-								<td><input type="text" name="product_size" placeholder="Size" style="width:250px;" maxLength="2" required></td>
+								<td><input type="text" name="product_size" placeholder="Kích cỡ" style="width:250px;" maxLength="2" required></td>
 							</tr>
 							<tr>
-								<td><input type="text" name="brand" placeholder="Brand Name	" style="width:250px;" required></td>
+								<td><input type="text" name="brand" placeholder="Tên loại giày" style="width:250px;" required></td>
 							</tr>
 							<tr>
-								<td><input type="number" name="qty" placeholder="No. of Stock" style="width:250px;" required></td>
+								<td><input type="number" name="qty" placeholder="Vị trí" style="width:250px;" required></td>
 							</tr>
 							<tr>
 								<td><input type="hidden" name="category" value="Running"></td>
@@ -100,8 +101,8 @@
 					</center>
 				</div>
 			<div class="modal-footer">
-				<input class="btn btn-primary" type="submit" name="add" value="Add">
-				<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+				<input class="btn btn-primary" type="submit" name="add" value="Thêm">
+				<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Đóng</button>
 					</form>
 			</div>
 		</div>
@@ -150,38 +151,38 @@
 			
 	<div id="leftnav">
 		<ul>
-			<li><a href="admin_home.php" style="color:#333;">Dashboard</a></li>
-			<li><a href="admin_home.php">Products</a>
+			<li><a href="admin_home.php" style="color:#333;">Bảng điều khiển</a></li>
+			<li><a href="admin_home.php">Sản phẩm</a>
 				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
+					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Tiềm năng</a></li>
+					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Giày bóng rổ</a></li>
+					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Giày bóng đá</a></li>
+					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Giày chạy</a></li>
 				</ul>
 			</li>
-			<li><a href="transaction.php">Transactions</a></li>
-			<li><a href="customer.php">Customers</a></li>
-			<li><a href="message.php">Messages</a></li>
-			<li><a href="order.php">Orders</a></li>
+			<li><a href="transaction.php">Giao dịch</a></li>
+			<li><a href="customer.php">Khách hàng</a></li>
+			<li><a href="message.php">Tin nhắn</a></li>
+			<li><a href="order.php">Đơn hàng</a></li>
 		</ul>
 	</div>
 	
 	<div id="rightcontent" style="position:absolute; top:10%;">
-			<div class="alert alert-info"><center><h2>Running</h2></center></div>
+			<div class="alert alert-info"><center><h2>Giày chạy</h2></center></div>
 			<br />
-				<label  style="padding:5px; float:right;"><input type="text" name="filter" placeholder="Search Product here..." id="filter"></label>
+				<label  style="padding:5px; float:right;"><input type="text" name="filter" placeholder="Tìm tên sản phẩm ở đây" id="filter"></label>
 			<br />
 			
 		<div class="alert alert-info">
 			<table class="table table-hover" style="background-color:;">
 				<thead>
 				<tr style="font-size:20px;">
-					<th>Product Image</th>
-					<th>Product Name</th>
-					<th>Product Price</th>
-					<th>Product Sizes</th>
-					<th>No. of Stock</th>
-					<th>Action</th>
+					<th>Hình ảnh</th>
+					<th>Tên sách phẩm</th>
+					<th>Giá</th>
+					<th>Kích cỡ</th>
+					<th>Vị trí</th>
+					<th>Hành động</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -208,8 +209,9 @@
 					<td><?php echo $fetch1['qty']?></td>
 					<td style="width:220px;">
 					<?php
-					echo "<a href='stockin.php?id=".$id."' class='btn btn-success' rel='facebox'><i class='icon-plus-sign icon-white'></i> Stock In</a> ";
-					echo "<a href='stockout.php?id=".$id."' class='btn btn-danger' rel='facebox'><i class='icon-minus-sign icon-white'></i> Stock Out</a>";
+					echo "<a href='stockin.php?id=".$id."' class='btn btn-success' rel='facebox'><i class='icon-plus-sign icon-white'></i> Hàng vào</a> ";
+					echo "<a href='stockout.php?id=".$id."' class='btn btn-danger' rel='facebox'><i class='icon-minus-sign icon-white'></i> Hàng ra</a>";
+					echo "<button class='remove' id=".$id.">Xóa</button>";
 					?>
 					</td>
 				</tr>		

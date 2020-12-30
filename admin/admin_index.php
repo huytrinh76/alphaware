@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web bán giày</title>
+	<title>Quản lý IRON FEVER</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="icon" href="../img/logo.jpg">
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/carousel.js"></script>
@@ -23,24 +24,24 @@
 <body>
 	<div id="header">
 		<img src="../img/logo.jpg">
-		<label>Web bán giày</label>
+		<label>IRON FEVER</label>
 	</div>
 	
 		<?php include('../function/admin_login.php');?>
 	<div id="admin">
 		<form method="post" class="well">
 			<center>
-				<legend>Quản Trị</legend>
+				<legend>Quản Trị IRFV</legend>
 					<table>
 						<tr>
-							<input type="text" name="username" placeholder="Username">
+							<input type="text" name="username" placeholder="Tên tài khoản">
 						</tr>
 						<tr>
-							<input type="password" name="password" placeholder="Password">
+							<input type="password" name="password" placeholder="Mật khẩu">
 						</tr>
 						<br>
 						<br>
-							<input type="submit" name="enter" value="Enter" class="btn btn-primary" style="width:200px;">
+							<input type="submit" name="enter" value="Đăng nhập" class="btn btn-primary" style="width:200px;">
 					</table>
 			</center>
 		</form>

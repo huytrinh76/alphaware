@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AlphaWare</title>
+	<title>Quản lý IRON FEVER</title>
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="icon" href="../img/logo.jpg">
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery-1.7.2.min.js"></script>
 	<script src="../js/carousel.js"></script>
@@ -61,7 +62,7 @@
 <body>
 	<div id="header" style="position:fixed;">
 		<img src="../img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 		
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -71,8 +72,8 @@
 			?>
 				
 			<ul>
-				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
+				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
 			</ul>
 	</div>
 	
@@ -166,33 +167,33 @@
 
 				?>
 			
-	<div id="leftnav">
+			<div id="leftnav">
 		<ul>
-			<li><a href="admin_home.php" style="color:#333;">Dashboard</a></li>
+			<li><a href="admin_home.php" style="color:#333;">Bảng điều khiển</a></li>
 			<li><a href="admin_home.php">Products</a>
 				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
+					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Tiềm năng</a></li>
+					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Giày bóng rổ</a></li>
+					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Giày bóng đá</a></li>
+					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Giày chạy</a></li>
 				</ul>
 			</li>
-			<li><a href="transaction.php">Transactions</a></li>
-			<li><a href="customer.php">Customers</a></li>
-			<li><a href="message.php">Messages</a></li>
-			<li><a href="order.php">Orders</a></li>
+			<li><a href="transaction.php">Giao dịch</a></li>
+			<li><a href="customer.php">Khách hàng</a></li>
+			<li><a href="message.php">Tin nhắn</a></li>
+			<li><a href="order.php">Đơn hàng</a></li>
 		</ul>
 	</div>
 	
 	<div id="rightcontent" style="position:absolute; top:10%;">
-			<div class="alert alert-info"><center><h2>Orders</h2></center></div>
+			<div class="alert alert-info"><center><h2>Đơn hàng</h2></center></div>
 			<br />
 				<div style='width:975px;' class="alert alert-info">
 					  <table class="table table-hover">	
 						<thead>	
-							<th>SHOE</th>
-							<th>Transaction No.</th>
-							<th>AMOUNT</th>
+							<th>Giày</th>
+							<th>Số giao dịch</th>
+							<th>Số tiền</th>
 						</thead>
 						  <tbody>
 							<?php 
@@ -221,7 +222,7 @@
 							while($r3 = mysqli_fetch_array($Q3)){
 							
 							$amnt = $r3['sum(amount)'];
-							echo "<tr><td></td><td>TOTAL : </td> <td><b>Php ".formatMoney($amnt)."</b></td></tr>";
+							echo "<tr><td></td><td>Tổng : </td> <td><b>VND ".formatMoney($amnt)."</b></td></tr>";
 							}
 							?>
 						  </tbody>

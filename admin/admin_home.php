@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web bán giày</title>
+	<title>Quản lý IRON FEVER</title>
+	<link rel="icon" href="../img/logo.jpg">
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<script src="../js/bootstrap.js"></script>
@@ -102,7 +103,7 @@ $(function () {
 
 	<div id="header" style="position:fixed;">
 		<img src="../img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 		
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -113,8 +114,8 @@ $(function () {
 			?>
 				
 			<ul>
-				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<a><i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
+				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<a><i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
 			</ul>
 	</div>
 	
@@ -122,13 +123,13 @@ $(function () {
 	
 	<div id="leftnav">
 		<ul>
-			<li><a href="admin_home.php" style="color:#333;">Dashboard</a></li>
-			<li><a href="admin_home.php">Products</a>
+			<li><a href="admin_home.php" style="color:#333;">Bảng điều khiển</a></li>
+			<li><a href="admin_home.php">Sản phẩm</a>
 				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
+					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Tiềm năng</a></li>
+					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Giày bóng rổ</a></li>
+					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Giày bóng đá</a></li>
+					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Giày chạy</a></li>
 				</ul>
 			</li>
 			<li><a href="transaction.php">Giao dịch</a></li>

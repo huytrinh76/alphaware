@@ -327,13 +327,13 @@ body{
 #leftnav ul li a
 	{
 		text-decoration:none;
-		color:#333;
+		color:white;
 		font-size:20px;
 	}
 	
 #leftnav ul li a:hover
 	{
-		color:#fff;
+		color: aqua;
 	}
 	
 #leftnav ul li ul 

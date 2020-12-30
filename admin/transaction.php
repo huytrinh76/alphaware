@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AlphaWare</title>
+	<title>Quản lý IRON FEVER</title>
 	<link rel = "stylesheet" type = "text/css" href="../css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="icon" href="../img/logo.jpg">
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery-1.7.2.min.js"></script>
 	<script src="../js/carousel.js"></script>
@@ -39,7 +40,7 @@
 <body>
 	<div id="header" style="position:fixed;">
 		<img src="../img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 		
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -49,8 +50,8 @@
 			?>
 				
 			<ul>
-				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
+				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
 			</ul>
 	</div>
 	
@@ -60,7 +61,7 @@
 		<div id="add" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:400px;">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-				<h3 id="myModalLabel">Add Product...</h3>
+				<h3 id="myModalLabel">Thêm sản phẩm</h3>
 			</div>
 				<div class="modal-body">
 					<form method="post" enctype="multipart/form-data">
@@ -146,26 +147,26 @@
 			
 	<div id="leftnav">
 		<ul>
-			<li><a href="admin_home.php" style="color:#333;">Dashboard</a></li>
-			<li><a href="admin_home.php">Products</a>
+			<li><a href="admin_home.php" style="color:#333;">Bảng điều khiển</a></li>
+			<li><a href="admin_home.php">Sản phẩm</a>
 				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
+					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Tiềm năng</a></li>
+					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Giày bóng rổ</a></li>
+					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Giày bóng đá</a></li>
+					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Giày chạy</a></li>
 				</ul>
 			</li>
-			<li><a href="transaction.php">Transactions</a></li>
-			<li><a href="customer.php">Customers</a></li>
-			<li><a href="message.php">Messages</a></li>
-			<li><a href="order.php">Orders</a></li>
+			<li><a href="transaction.php">Giao dịch</a></li>
+			<li><a href="customer.php">Khách hàng</a></li>
+			<li><a href="message.php">Tin nhắn</a></li>
+			<li><a href="order.php">Đơn hàng</a></li>
 		</ul>
 	</div>
 	
 	<div id="rightcontent" style="position:absolute; top:10%;">
-			<div class="alert alert-info"><center><h2>Transactions	</h2></center></div>
+			<div class="alert alert-info"><center><h2>Giao dịch	</h2></center></div>
 			<br />
-				<label  style="padding:5px; float:right;"><input type="text" name="filter" placeholder="Search Transactions here..." id="filter"></label>
+				<label  style="padding:5px; float:right;"><input type="text" name="filter" placeholder="Tìm hóa đơn giao dịch ở đây" id="filter"></label>
 			<br />
 			
 			<div class="alert alert-info">
@@ -173,11 +174,11 @@
 				<thead>
 				<tr style="font-size:16px;">
 					<th>ID</th>
-					<th>DATE</th>
-					<th>Customer Name</th>
-					<th>Total Amount</th>
-					<th>Order Status</th>
-					<th>Action</th>
+					<th>Ngày tháng</th>
+					<th>Tên khách hàng</th>
+					<th>Tổng số tiền</th>
+					<th>Trạng thái đơn hàng</th>
+					<th>Hành động</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -199,15 +200,15 @@
 					<td><?php echo $name; ?></td>
 					<td><?php echo $amnt; ?></td>
 					<td><?php echo $o_stat; ?></td>
-					<td><a href="receipt.php?tid=<?php echo $id; ?>">View</a>
+					<td><a href="receipt.php?tid=<?php echo $id; ?>">Xem</a>
 					<?php 
 					if($o_stat == 'Confirmed'){
 					
 					}elseif($o_stat == 'Cancelled'){
 					
 					}else{
-					echo '| <a class="btn btn-mini btn-info" href="confirm.php?id='.$id.'">Confirm</a> ';
-					echo '| <a class="btn btn-mini btn-danger" href="cancel.php?id='.$id.'">Cancel</a></td>';
+					echo '| <a class="btn btn-mini btn-info" href="confirm.php?id='.$id.'">Xác nhận</a> ';
+					echo '| <a class="btn btn-mini btn-danger" href="cancel.php?id='.$id.'">Hủy</a></td>';
 					}					
 					?>
 				</tr>		
@@ -265,7 +266,7 @@
 		var id = $(this).attr("id");
 
 		
-		if(confirm("Are you sure you want to delete this product?")){
+		if(confirm("Bạn có chắc muốn xóa hóa đơn này?")){
 			
 		
 			$.ajax({
