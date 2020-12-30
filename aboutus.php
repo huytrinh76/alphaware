@@ -98,7 +98,7 @@
 	
 	<legend>SPREAD THE FEVER</legend>
 		<div id="content">
-			<legend><h3>Nhiệm vụ của chúng tôi</h3></legend>
+			
 					<h4 style="text-indent:60px;">[IRON FEVER] / SINCE 2017. <br>&emsp;Chúng tôi mong muốn xây dựng thông điệp “TINH THẦN THÉP” thông qua những giá trị cũng như là sản phẩm để truyền tải tới cộng đồng một tinh thần tích cực nhất.</h4>
 			<br />
 			
