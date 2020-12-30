@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AlphaWare</title>
+	<title>Trang chính</title>
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="icon" href="img/logo.jpg" />
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/carousel.js"></script>
@@ -26,7 +27,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 		
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -36,15 +37,15 @@
 			?>
 	
 			<ul>
-				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
+				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
 			</ul>	
 	</div>
 	
 		<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h3 id="myModalLabel">My Account</h3>
+					<h3 id="myModalLabel">Tài khoản của tôi</h3>
 				</div>
 					<div class="modal-body">
 						<?php
@@ -58,22 +59,22 @@
 						<center>
 							<table>
 								<tr>
-									<td class="profile">Name:</td><td class="profile"><?php echo $fetch['firstname'];?>&nbsp;<?php echo $fetch['mi'];?>&nbsp;<?php echo $fetch['lastname'];?></td>
+									<td class="profile">Họ tên:</td><td class="profile"><?php echo $fetch['firstname'];?>&nbsp;<?php echo $fetch['mi'];?>&nbsp;<?php echo $fetch['lastname'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Address:</td><td class="profile"><?php echo $fetch['address'];?></td>
+									<td class="profile">Địa chỉ:</td><td class="profile"><?php echo $fetch['address'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Country:</td><td class="profile"><?php echo $fetch['country'];?></td>
+									<td class="profile">Quốc gia:</td><td class="profile"><?php echo $fetch['country'];?></td>
 								</tr>
 								<tr>
 									<td class="profile">ZIP Code:</td><td class="profile"><?php echo $fetch['zipcode'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Mobile Number:</td><td class="profile"><?php echo $fetch['mobile'];?></td>
+									<td class="profile">Số điện thoại:</td><td class="profile"><?php echo $fetch['mobile'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Telephone Number:</td><td class="profile"><?php echo $fetch['telephone'];?></td>
+									<td class="profile">Điện thoại bàn:</td><td class="profile"><?php echo $fetch['telephone'];?></td>
 								</tr>
 								<tr>
 									<td class="profile">Email:</td><td class="profile"><?php echo $fetch['email'];?></td>
@@ -100,14 +101,14 @@
 	<div id="content">
 		<div class="nav">
 	
-			 <ul>
-				<li><a href="home.php"><i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"><i class="icon-th-list"></i>Product</a>
-				<li><a href="aboutus1.php"><i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
+		<ul>
+	   <li><a href="index.php"><i class="icon-home"></i>Trang chủ</a></li>
+	   <li><a href="product.php"><i class="icon-th-list"></i>Sản phẩm</a>
+	   <li><a href="aboutus.php"><i class="icon-bookmark"></i>Về chúng tôi</a></li>
+	   <li><a href="contactus.php"><i class="icon-inbox"></i>Hỗ trợ</a></li>
+	   <li><a href="privacy.php"><i class="icon-info-sign"></i>Điều khoản</a></li>
+	   <li><a href="faqs.php"><i class="icon-question-sign"></i>Câu hỏi thường gặp</a></li>
+   </ul>
 		</div>
 		
 		<div id="carousel">
@@ -130,7 +131,7 @@
 		</div>
 		
 		<div id="product" style="position:relative; margin-top:30%;">
-			<center><h2><legend>Featured Items</legend></h2></center>
+			<center><h2><legend>Sản phẩm tiềm năng</legend></h2></center>
 			<br />
 			
 			<?php 
@@ -154,9 +155,9 @@
 							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='photo/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
 							echo "".$fetch['product_name']."";
 							echo "<br />";
-							echo "P ".$fetch['product_price']."";
+							echo "Giá ".$fetch['product_price']."";
 							echo "<br />";
-							echo "<h3 class='text-info' style='position:absolute; margin-top:-90px; text-indent:15px;'> Size: ".$fetch['product_size']."</h3>";
+							echo "<h3 class='text-info' style='position:absolute; margin-top:-90px; text-indent:15px;'> Kích cỡ: ".$fetch['product_size']."</h3>";
 							echo "</center>";
 							echo "</div>";
 						}
@@ -175,16 +176,14 @@
 	<div id="footer">
 		<div class="foot">
 			<label style="font-size:17px;"> Copyright &copy; </label>
-			<p style="font-size:25px;">Alphaware Inc. 2015</p>
+			<p style="font-size:25px;">IRON FEVER EST 2017</p>
 		</div>
 			
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/alphaware"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/alphaware"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/alphaware"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/alphaware"><li>Tumblr</li></a>
+						<a href="https://www.facebook.com/ironfevervietnam"><li>Facebook</li></a>
+						<a href="https://www.instagram.com/ironfever_vietnam/"><li>Instagram</li></a>
 					</ul>
 			</div>
 	</div>
