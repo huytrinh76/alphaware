@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AlphaWare</title>
+	<title>Sản phẩm</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -29,7 +29,7 @@
 <body>
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 			
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -39,15 +39,15 @@
 			?>
 	
 			<ul>
-				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
+				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
 			</ul>
 	</div>
 	
 	<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h3 id="myModalLabel">My Account</h3>
+					<h3 id="myModalLabel">Tài khoản của tôi</h3>
 				</div>
 					<div class="modal-body">
 						<?php
@@ -61,22 +61,22 @@
 						<center>
 							<table>
 								<tr>
-									<td class="profile">Name:</td><td class="profile"><?php echo $fetch['firstname'];?>&nbsp;<?php echo $fetch['mi'];?>&nbsp;<?php echo $fetch['lastname'];?></td>
+									<td class="profile">Họ tên:</td><td class="profile"><?php echo $fetch['firstname'];?>&nbsp;<?php echo $fetch['mi'];?>&nbsp;<?php echo $fetch['lastname'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Address:</td><td class="profile"><?php echo $fetch['address'];?></td>
+									<td class="profile">Địa chỉ:</td><td class="profile"><?php echo $fetch['address'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Country:</td><td class="profile"><?php echo $fetch['country'];?></td>
+									<td class="profile">Quốc gia:</td><td class="profile"><?php echo $fetch['country'];?></td>
 								</tr>
 								<tr>
 									<td class="profile">ZIP Code:</td><td class="profile"><?php echo $fetch['zipcode'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Mobile Number:</td><td class="profile"><?php echo $fetch['mobile'];?></td>
+									<td class="profile">Số điện thoại:</td><td class="profile"><?php echo $fetch['mobile'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Telephone Number:</td><td class="profile"><?php echo $fetch['telephone'];?></td>
+									<td class="profile">Điện thoại bàn:</td><td class="profile"><?php echo $fetch['telephone'];?></td>
 								</tr>
 								<tr>
 									<td class="profile">Email:</td><td class="profile"><?php echo $fetch['email'];?></td>
@@ -85,8 +85,8 @@
 						</center>
 					</div>
 				<div class="modal-footer">
-					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Edit Account"></a>
-					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Chỉnh sửa tài khoản"></a>
+					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Đóng</button>
 				</div>
 					</form>
 			</div>
@@ -96,14 +96,14 @@
 	<br>
 <div id="container">
 	<div class="nav">	
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
+	<ul>
+	   <li><a href="index.php"><i class="icon-home"></i>Trang chủ</a></li>
+	   <li><a href="product.php"><i class="icon-th-list"></i>Sản phẩm</a>
+	   <li><a href="aboutus.php"><i class="icon-bookmark"></i>Về chúng tôi</a></li>
+	   <li><a href="contactus.php"><i class="icon-inbox"></i>Hỗ trợ</a></li>
+	   <li><a href="privacy.php"><i class="icon-info-sign"></i>Điều khoản</a></li>
+	   <li><a href="faqs.php"><i class="icon-question-sign"></i>Câu hỏi thường gặp</a></li>
+   </ul>
 	</div>
 		<?php 
 			if(isset($_GET['id'])){
@@ -115,9 +115,9 @@
 					<center>
 						<img class="img-polaroid" style="width:400px; height:350px;" src="photo/<?php echo $row['product_image']; ?>">
 						<h2 class="text-uppercase bg-primary"><?php echo $row['product_name']?></h2>
-						<h3 class="text-uppercase">Php <?php echo $row['product_price']?></h3>
-						<h3 class="text-uppercase">Size: <?php echo $row['product_size']?></h3>
-						<?php echo "<a href='cart.php?id=".$id."&action=add'><input type='submit' class='btn btn-inverse' name='add' value='Add to Cart'></a> &nbsp;  <a href='product1.php'><button class='btn btn-inverse'>Back</button></a> " ?>
+						<h3 class="text-uppercase">Giá: <?php echo $row['product_price']?></h3>
+						<h3 class="text-uppercase">Kích cỡ: <?php echo $row['product_size']?></h3>
+						<?php echo "<a href='cart.php?id=".$id."&action=add'><input type='submit' class='btn btn-inverse' name='add' value='Thêm vào giỏ'></a> &nbsp;  <a href='product1.php'><button class='btn btn-inverse'>Quay lại</button></a> " ?>
 					</center>
 				</div>
 		<?php }?>
@@ -188,25 +188,15 @@
 	<br />
 	<div id="footer">
 		<div class="foot">
-			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Alphaware Inc. 2015</p>
+			<label style="font-size:17px;"> Copyright &copy; </label>
+			<p style="font-size:25px;">IRON FEVER EST 2017</p>
 		</div>
 			
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/alphaware"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/alphaware"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/alphaware"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/alphaware"><li>Tumblr</li></a>
-					</ul>
-			</div>
-			
-			<div id="develop">
-				<h4>Developed By:</h4>
-					<ul>
-						<a href="#"><li>Allen Joshua Nicor</li><a>
-						<a href="#"><li>Ryan Carl Biaquis</li><a>
+						<a href="https://www.facebook.com/ironfevervietnam"><li>Facebook</li></a>
+						<a href="https://www.instagram.com/ironfever_vietnam/"><li>Instagram</li></a>
 					</ul>
 			</div>
 	</div>

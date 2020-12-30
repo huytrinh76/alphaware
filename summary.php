@@ -8,7 +8,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 ?>
 <html>
 <head>
-	<title>AlphaWare</title>
+	<title>IRON FEVER</title>
 	<link rel="icon" href="img/logo.jpg" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -31,7 +31,7 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 
 	<div id="header">
 		<img src="img/logo.jpg">
-		<label>alphaware</label>
+		<label>IRON FEVER</label>
 			
 			<?php
 				$id = (int) $_SESSION['id'];
@@ -40,16 +40,16 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 					$fetch = mysqli_fetch_array ($query);
 			?>
 	
-			<ul>
-				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<a href="#profile"  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
+	<ul>
+				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>Đăng xuất</a></li>
+				<li>Chào mừng:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
 			</ul>
 	</div>
 	
 	<div id="profile" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h3 id="myModalLabel">My Account</h3>
+					<h3 id="myModalLabel">Tài khoản của tôi</h3>
 				</div>
 					<div class="modal-body">
 						<?php
@@ -63,22 +63,22 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 						<center>
 							<table>
 								<tr>
-									<td class="profile">Name:</td><td class="profile"><?php echo $fetch['firstname'];?>&nbsp;<?php echo $fetch['mi'];?>&nbsp;<?php echo $fetch['lastname'];?></td>
+									<td class="profile">Họ tên:</td><td class="profile"><?php echo $fetch['firstname'];?>&nbsp;<?php echo $fetch['mi'];?>&nbsp;<?php echo $fetch['lastname'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Address:</td><td class="profile"><?php echo $fetch['address'];?></td>
+									<td class="profile">Địa chỉ:</td><td class="profile"><?php echo $fetch['address'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Country:</td><td class="profile"><?php echo $fetch['country'];?></td>
+									<td class="profile">Quốc gia:</td><td class="profile"><?php echo $fetch['country'];?></td>
 								</tr>
 								<tr>
 									<td class="profile">ZIP Code:</td><td class="profile"><?php echo $fetch['zipcode'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Mobile Number:</td><td class="profile"><?php echo $fetch['mobile'];?></td>
+									<td class="profile">Số điện thoại:</td><td class="profile"><?php echo $fetch['mobile'];?></td>
 								</tr>
 								<tr>
-									<td class="profile">Telephone Number:</td><td class="profile"><?php echo $fetch['telephone'];?></td>
+									<td class="profile">Điện thoại bàn:</td><td class="profile"><?php echo $fetch['telephone'];?></td>
 								</tr>
 								<tr>
 									<td class="profile">Email:</td><td class="profile"><?php echo $fetch['email'];?></td>
@@ -87,8 +87,8 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 						</center>
 					</div>
 				<div class="modal-footer">
-					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Edit Account"></a>
-					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Chỉnh sửa tài khoản"></a>
+					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Đóng</button>
 				</div>
 					</form>
 			</div>
@@ -98,24 +98,24 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 	<br>
 <div id="container">
 	<div class="nav">	
-			 <ul>
-				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
-				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
-				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
-				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
-				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
-				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
-			</ul>
+	<ul>
+	   <li><a href="index.php"><i class="icon-home"></i>Trang chủ</a></li>
+	   <li><a href="product.php"><i class="icon-th-list"></i>Sản phẩm</a>
+	   <li><a href="aboutus.php"><i class="icon-bookmark"></i>Về chúng tôi</a></li>
+	   <li><a href="contactus.php"><i class="icon-inbox"></i>Hỗ trợ</a></li>
+	   <li><a href="privacy.php"><i class="icon-info-sign"></i>Điều khoản</a></li>
+	   <li><a href="faqs.php"><i class="icon-question-sign"></i>Câu hỏi thường gặp</a></li>
+   </ul>
 	</div>
 	
 	<form method="post" class="well"  style="background-color:#fff; overflow:hidden;">
 	<table class="table" style="width:50%;">
-	<label style="font-size:25px;">Summary of Order/s</label>
+	<label style="font-size:25px;">Hóa đơn thanh toán</label>
 		<tr>
-			<th><h5>Quantity</h5></td>
-			<th><h5>Product Name</h5></td>
-			<th><h5>Size</h5></td>
-			<th><h5>Price</h5></td>
+			<th><h5>Số lượng</h5></td>
+			<th><h5>Tên sản phẩm</h5></td>
+			<th><h5>Kích cỡ</h5></td>
+			<th><h5>Giá</h5></td>
 		</tr>
 		
 		<?php
@@ -145,14 +145,14 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 
 	</table>
 	<legend></legend>
-	<h4>TOTAL: Php <?php echo $amnt; ?></h4>
+	<h4>Tổng thanh toán: <?php echo $amnt; ?>đ</h4>
 	</form>
 	<div class='pull-right'>
 <div class="">
     <form action="<?php echo $paypal_url ?>" method="post" >
     <input type="hidden" name="business" value="<?php echo $paypal_id; ?>">
     <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="item_name" value="Alphaware Shoes">
+    <input type="hidden" name="item_name" value="IRON FEVER Shoes">
     <input type="hidden" name="item_number" value="<?php echo $t_id; ?>">
     <input type="hidden" name="credits" value="510">
     <input type="hidden" name="userid" value="1">
@@ -195,19 +195,17 @@ $paypal_id='yhannaki@gmail.com'; // Business email ID
 		<br />	
 </div>
 <br />
-	<div id="footer">
+<div id="footer">
 		<div class="foot">
-			<label style="font-size:17px;"> Copyrght &copy; </label>
-			<p style="font-size:25px;">Alphaware Inc. 2015</p>
+			<label style="font-size:17px;"> Copyright &copy; </label>
+			<p style="font-size:25px;">IRON FEVER EST 2017</p>
 		</div>
 			
 			<div id="foot">
 				<h4>Links</h4>
 					<ul>
-						<a href="http://www.facebook.com/alphaware"><li>Facebook</li></a>
-						<a href="http://www.twitter.com/alphaware"><li>Twitter</li></a>
-						<a href="http://www.pinterest.com/alphaware"><li>Pinterest</li></a>
-						<a href="http://www.tumblr.com/alphaware"><li>Tumblr</li></a>
+						<a href="https://www.facebook.com/ironfevervietnam"><li>Facebook</li></a>
+						<a href="https://www.instagram.com/ironfever_vietnam/"><li>Instagram</li></a>
 					</ul>
 			</div>
 	</div>

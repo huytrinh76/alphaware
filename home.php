@@ -83,8 +83,8 @@
 						</center>
 					</div>
 				<div class="modal-footer">
-					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Edit Account"></a>
-					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Chỉnh sửa tài khoản"></a>
+					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Đóng</button>
 				</div>
 					</form>
 			</div>
